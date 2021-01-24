@@ -59,7 +59,7 @@ resource "azurerm_virtual_machine" "vm" {
   os_profile {
     computer_name  = "JumpBox"
     admin_username = "testadmin"
-    admin_password = "#{adminpasswordnew}#"
+    admin_password = var.adminpassword
     #admin_password = data.azurerm_key_vault_secret.secret.value
   }
 

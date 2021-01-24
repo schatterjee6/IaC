@@ -41,10 +41,9 @@ variable sku{
     type = string
 }
 
-/*
 variable admin_password{
     type = string 
-}*/
+}
 
  variable sharedvnet{
    type = string 

@@ -183,7 +183,7 @@ module "jbox-vm" {
   publisher = var.publisher
   offer = var.offer
   sku = var.sku
-  #admin_password = var.admin_password
+  adminpassword = var.admin_password
   
 }
 
@@ -200,7 +200,7 @@ module "web-vm" {
   publisher = var.publisher
   offer = var.offer
   sku = var.sku
-  #admin_password = var.admin_password
+  adminpassword = var.admin_password
 }
 
 

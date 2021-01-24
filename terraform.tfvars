@@ -10,7 +10,7 @@
   publisher = "MicrosoftWindowsServer"
   offer = "WindowsServer"
   sku = "2016-Datacenter"
-  #admin_password = "Password1234!"
+  admin_password = "#{adminpasswordnew}#"
   sharedvnet = "Shared-Vnet" 
   appvnet = "Application-Vnet"
   sharedspaceapp = ["192.168.0.0/16"]

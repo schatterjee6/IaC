@@ -41,8 +41,7 @@ variable sku{
     default = "2016-Datacenter"  
 }
 
-/*
-variable admin_password{
+variable adminpassword{
     type = string
     
-}*/
+}
