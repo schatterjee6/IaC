@@ -1,9 +1,9 @@
 
-resource "azurerm_network_security_group" "vm" {
+/*resource "azurerm_network_security_group" "vm" {
   name                = "${var.vmprefix}-01nsg"
   location            = var.location
   resource_group_name = var.rg
-}
+}*/
 
 resource "azurerm_network_interface" "vm" {
   name                = "${var.vmprefix}-nic"
