@@ -34,7 +34,7 @@ resource "azurerm_resource_group" "Web-RG" {
 }*/
 
 resource "azurerm_network_security_group" "nsgjmp" {
-  name                = "Jump-NSG"
+  name                = var.jmpnsg
   location            = var.location
   resource_group_name = module.resource_group.rgname_jmp #THis is captured fom output.tf under modules, resourcegroup
 }
@@ -85,7 +85,7 @@ resource "azurerm_virtual_network" "SharedVnet" {
 
 
 resource "azurerm_network_security_group" "nsgapplciation" {
-  name                = "App-NSG"
+  name                = var.appnsg
   location            = var.location
   resource_group_name = module.resource_group.rgname_web
 }

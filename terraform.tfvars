@@ -16,3 +16,5 @@
   sharedspaceapp = ["192.168.0.0/16"]
   sharedspace = ["10.0.0.0/16"]
   rg_arm = ["Fw-RG","Jmp-RG","Nw-RG","Web-RG"]
+  jmpnsg = "Jmp-NSG"
+  appnsg = "App-NSG"

@@ -66,4 +66,11 @@ variable admin_password{
    type = list
  }
 
+ variable appnsg{
+   type = string
+ }
+ variable jmpnsg{
+   type = string
+ }
+ 
  
