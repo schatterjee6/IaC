@@ -152,6 +152,14 @@ resource "azurerm_public_ip" "Fwpip" {
   sku                 = "Standard"
 }
 
+resource "azurerm_public_ip" "Fwpip1" {
+  name                = "Firewall-Sou-Pip-1"
+  location            = var.location
+  resource_group_name = module.resource_group.rgname_nw
+  allocation_method   = "Static"
+  sku                 = "Standard"
+}
+
 resource "azurerm_firewall" "Fw" {
   name                = "SC-IND-FW01"
   location            = var.location
@@ -336,4 +344,28 @@ resource "azurerm_firewall_nat_rule_collection" "NATrule" {
       "UDP",
     ]
   }
+    rule {
+    name = "Webrule"
+
+    source_addresses = [
+      "*"
+    ]
+
+    destination_ports = [
+      "80",
+    ]
+
+    destination_addresses = [
+      azurerm_public_ip.Fwpip1.ip_address
+    ]
+
+    translated_port = 80
+
+    translated_address = module.web-vm.nic_id
+
+    protocols = [
+      "TCP",
+    ]
+  }
+  
 }
