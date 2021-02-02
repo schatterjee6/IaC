@@ -211,7 +211,20 @@ module "web-vm" {
   adminpassword = var.admin_password
 }
 
+resource "azurerm_virtual_machine_extension" "vm_extension_install_iis" {
+  name                       = "vm_extension_install_iis"
+  virtual_machine_id         = module.web-vm.id
+  publisher                  = "Microsoft.Compute"
+  type                       = "CustomScriptExtension"
+  type_handler_version       = "1.8"
+  auto_upgrade_minor_version = true
 
+  settings = <<SETTINGS
+    {
+        "commandToExecute": "powershell -ExecutionPolicy Unrestricted Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -IncludeManagementTools"
+    }
+SETTINGS
+}
 /*
 resource "azurerm_network_interface" "nic" {
   name                = "jmp-nic"
