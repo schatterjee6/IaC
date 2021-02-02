@@ -337,7 +337,7 @@ resource "azurerm_firewall_nat_rule_collection" "NATrule" {
     name = "RDPrule"
 
     source_addresses = [
-      "*"
+      "157.43.219.156"
     ]
 
     destination_ports = [
@@ -370,7 +370,7 @@ resource "azurerm_firewall_nat_rule_collection" "NATrule" {
     name = "Webrule"
 
     source_addresses = [
-      "*"
+      "157.43.219.156"
     ]
 
     destination_ports = [
