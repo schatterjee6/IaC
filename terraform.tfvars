@@ -1,5 +1,5 @@
-  web-vmprefix = "SRA3PM-ASQL02"
-  jmp-vmprefix = "SRA3PM-ASQL01"
+  web-vmprefix = "MLIAC-WEB01"
+  jmp-vmprefix = "MLIAC-JMP01"
   location = "centralindia"
   rg = "Jmp-RG"
   rg1 = "Web-RG"
