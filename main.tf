@@ -50,7 +50,7 @@ resource "azurerm_network_security_rule" "nsgjmprule" {
   source_address_prefix       = "*"
   destination_address_prefix  = "*"
   resource_group_name         = module.resource_group.rgname_jmp
-  network_security_group_name = module.jbox-vm.nsgname
+  network_security_group_name = azurerm_network_security_group.nsgjmp.name
 }
 
 module "shared-vnet" {
