@@ -357,7 +357,17 @@ resource "azurerm_firewall_nat_rule_collection" "NATrule" {
       "UDP",
     ]
   }
-    rule {
+    
+  }
+
+  resource "azurerm_firewall_nat_rule_collection" "NATrule1" {
+  name                = "NAT-Rule-Web"
+  azure_firewall_name = azurerm_firewall.Fw.name
+  resource_group_name = module.resource_group.rgname_nw
+  priority            = 101
+  action              = "Dnat"
+
+  rule {
     name = "Webrule"
 
     source_addresses = [
@@ -380,5 +390,5 @@ resource "azurerm_firewall_nat_rule_collection" "NATrule" {
       "TCP",
     ]
   }
-  
-}
+    
+  }
