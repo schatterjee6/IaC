@@ -213,7 +213,7 @@ module "web-vm" {
 
 resource "azurerm_virtual_machine_extension" "vm_extension_install_iis" {
   name                       = "vm_extension_install_iis"
-  virtual_machine_id         = module.web-vm.id
+  virtual_machine_id         = module.web-vm.azurevm_id
   publisher                  = "Microsoft.Compute"
   type                       = "CustomScriptExtension"
   type_handler_version       = "1.8"

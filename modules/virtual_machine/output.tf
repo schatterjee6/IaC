@@ -2,6 +2,10 @@ output azurevm{
  value = azurerm_virtual_machine.vm.name
 }
 
+output azurevm_id{
+ value = azurerm_virtual_machine.vm.id
+}
+
 output nic_id{
  value = azurerm_network_interface.vm.private_ip_address
 }
