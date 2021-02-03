@@ -220,7 +220,7 @@ module "web-vm" {
 resource "azurerm_virtual_machine_extension" "vm_extension_install_iis" {
   name                       = "vm_extension_install_iis"
   virtual_machine_id         = module.web-vm.azurevm_id
-  publisher                  = "Microsoft.Azure.Extensions"
+  publisher                  = "Microsoft.Compute"
   type                       = "CustomScript"
   type_handler_version       = "2.0"
   auto_upgrade_minor_version = true
