@@ -1,5 +1,5 @@
 provider "azurerm" {
-  version = "=2.33.0"
+  version = "~> 2.0.0"
   features {}
 }
 
@@ -180,7 +180,7 @@ resource "azurerm_firewall_policy" "FWPolicy" {
 
 module "jbox-vm" {
   source = "./modules/virtual_machine"
-  vmprefix = var.jmp-vmprefix
+     = var.jmp-vmprefix
   location = var.location
   subnet_id = azurerm_subnet.Bastion.id
   rg = var.rg
