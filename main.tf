@@ -183,7 +183,7 @@ resource "azurerm_firewall_policy" "FWPolicy" {
 
 module "jbox-vm" {
   source = "./modules/virtual_machine"
-     = var.jmp-vmprefix
+  vmprefix = var.jmp-vmprefix
   location = var.location
   subnet_id = azurerm_subnet.Bastion.id
   rg = var.rg
