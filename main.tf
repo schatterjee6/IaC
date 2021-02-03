@@ -173,7 +173,7 @@ resource "azurerm_firewall" "Fw" {
   
   ip_configuration {
     name                 = "configuration1"
-    subnet_id            = azurerm_subnet.Firewall.id
+    #subnet_id            = azurerm_subnet.Firewall.id
     public_ip_address_id = azurerm_public_ip.Fwpip1.id
   }
 }
